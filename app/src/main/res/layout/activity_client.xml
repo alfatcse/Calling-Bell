@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/pic2"
+    tools:context="com.example.alfat.callingbell.ClientActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="143dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:id="@+id/loginpanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapCharacters"
+                android:hint="Client name"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:digits="0123456789."
+                android:hint="Network Address"
+                android:inputType="number|numberDecimal"
+                android:text="192.168."
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <TextView
+                android:id="@+id/port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Port"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#feff77"
+                android:text="Connect..." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chatpanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acknowledged"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:background="#feff77"/>
+
+            <Button
+                android:id="@+id/disconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disconnect"
+                android:layout_marginTop="50dp"
+                android:background="#feff77"/>
+
+
+
+            <TextView
+                android:id="@+id/server_msg"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="406dp"
+        android:layout_height="133dp"
+        android:text="Client"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="27dp"
+        android:textAlignment="center"
+        android:textSize="@dimen/abc_dropdownitem_icon_width"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
